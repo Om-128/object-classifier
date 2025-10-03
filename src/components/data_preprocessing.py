@@ -5,6 +5,9 @@ from dataclasses import dataclass
 import pickle
 from tensorflow.keras.utils import to_categorical
 from src.utils import save_preprocessor
+from tensorflow.keras.preprocessing import image
+from PIL import Image
+import cv2
 
 '''
     Configuration class for Data Preprocessing.
@@ -43,13 +46,15 @@ class DataPreprocessing:
         except Exception as e:
             raise e
 
-    def preprocess_single_image(self, img_array):
-        """
-        Preprocess single image (already loaded as np.array).
-        - Resize to (32,32,3) if needed
-        - Normalize
-        - Expand dims for model input
-        """
-        img_array = img_array.astype("float32") / 255.0
-        img_array = np.expand_dims(img_array, axis=0)  # (1,32,32,3)
-        return img_array
+    def preprocess_single_image(self, img):
+
+        if isinstance(img, str):
+            img = Image.open(img)
+
+        if isinstance(img, Image.Image):
+            img = np.array(img)
+
+        img = cv2.resize(img, (32, 32))
+        img = img.astype("float32") / 255.0
+        img= np.expand_dims(img, axis=0)  # (1,32,32,3)
+        return img
