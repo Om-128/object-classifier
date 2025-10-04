@@ -29,7 +29,9 @@ python -m venv venv
 venv\Scripts\activate      # for Windows
 pip install -r requirements.txt
 
-## 2️⃣ Train the Model
+
+### 2️⃣ Train the Model
+```bash
 python -m src.pipeline.train_pipeline
 
     - This will train the model and save:
