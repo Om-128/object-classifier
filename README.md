@@ -20,9 +20,9 @@ Built to understand how to structure an **AI/ML project modularly** — includin
 ---
 
 ## 🚀 How to Run
+```bash
 
 ### 1️⃣ Setup Environment
-```bash
     - git clone https://github.com/<your-username>/object-classifier.git
     - cd object-classifier
     - python -m venv venv
@@ -32,7 +32,6 @@ Built to understand how to structure an **AI/ML project modularly** — includin
 ---
 
 ### 2️⃣ Train the Model
-```bash
 python -m src.pipeline.train_pipeline
     - This will train the model and save:
     - model.h5 → trained model
@@ -41,7 +40,6 @@ python -m src.pipeline.train_pipeline
 ---
 
 ### 3️⃣ Make Predictions
-```bash
 python -m src.pipeline.predict_pipeline
     - Make sure you have an image file like sample.jpg in the project folder.
     - Example Output:
