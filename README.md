@@ -29,7 +29,6 @@ Built to understand how to structure an **AI/ML project modularly** — includin
     - venv\Scripts\activate      # for Windows
     - pip install -r requirements.txt
 
----
 
 ### 2️⃣ Train the Model
 python -m src.pipeline.train_pipeline
@@ -37,7 +36,6 @@ python -m src.pipeline.train_pipeline
     - model.h5 → trained model
     - preprocessor.pkl → preprocessing object
 
----
 
 ### 3️⃣ Make Predictions
 python -m src.pipeline.predict_pipeline
