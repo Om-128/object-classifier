@@ -28,7 +28,7 @@ if __name__ == "__main__":
     config = PredictPipelineConfig()
     pipeline = PredictPipeline(config)
 
-    img = cv2.imread("sample2.jpg")
+    img = cv2.imread("sample6.jpg")
     
     predicted_class_name, confidence = pipeline.run(img)
 
