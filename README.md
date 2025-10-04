@@ -36,7 +36,7 @@ python -m src.pipeline.train_pipeline
     - model.h5 → trained model
     - preprocessor.pkl → preprocessing object
 
-3️⃣ Make Predictions
+## 3️⃣ Make Predictions
 python -m src.pipeline.predict_pipeline
 
     - Make sure you have an image file like sample.jpg in the project folder.
